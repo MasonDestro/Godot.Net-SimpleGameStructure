@@ -1,0 +1,258 @@
+[gd_scene load_steps=32 format=3 uid="uid://cy4cv5a5o8ave"]
+
+[ext_resource type="Texture2D" uid="uid://ci72i03mj88hj" path="res://Art/Texture/Crosshairs.png" id="1_6m21f"]
+[ext_resource type="Script" path="res://Scripts/Node3DRoot.cs" id="1_rvwsf"]
+[ext_resource type="PackedScene" uid="uid://ybqs3dfowsba" path="res://Prefabs/Characters/Player.tscn" id="1_uamsx"]
+[ext_resource type="Script" path="res://Scripts/Game Structure/Managers/UIManager.cs" id="1_ya58u"]
+[ext_resource type="Texture2D" uid="uid://dbkwanr8250v8" path="res://Art/Texture/00 Magenta.png" id="3_sqdta"]
+[ext_resource type="Script" path="res://Scripts/EscPanel.cs" id="3_stl7t"]
+[ext_resource type="Texture2D" uid="uid://cps5xdqpql8m5" path="res://Art/Texture/00 Cyan.png" id="4_2gpcr"]
+[ext_resource type="Texture2D" uid="uid://ds5krbsow40cp" path="res://Art/Texture/00 Blue.png" id="5_hmxxu"]
+[ext_resource type="Texture2D" uid="uid://cpqsg3bbkxqfx" path="res://Art/Texture/00 Yellow.png" id="6_t6hdm"]
+[ext_resource type="Texture2D" uid="uid://dpcie3wwabmro" path="res://Art/Texture/00 Black.png" id="6_yaqib"]
+[ext_resource type="Texture2D" uid="uid://6yovtay82f4n" path="res://Art/Texture/00 Green.png" id="7_7g0a2"]
+[ext_resource type="PackedScene" uid="uid://bfweiy4i01v07" path="res://Prefabs/Equipments/Spear/Spear_Rigi.tscn" id="11_4ynku"]
+[ext_resource type="PackedScene" uid="uid://dhxvjov3ke1il" path="res://Prefabs/Characters/Enemy.tscn" id="12_mkbat"]
+[ext_resource type="PackedScene" uid="uid://dsjllrus3admr" path="res://Prefabs/Equipments/Spear/Spear_Area.tscn" id="13_3j3lx"]
+[ext_resource type="PackedScene" uid="uid://c8qdrkd0glq36" path="res://Prefabs/Equipments/VehicleEquip.tscn" id="13_p3k0t"]
+[ext_resource type="PackedScene" uid="uid://cm5uhcybqm5am" path="res://Prefabs/Equipments/DroneEquip.tscn" id="14_tpd2e"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nkrc8"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_npicf"]
+sky_material = SubResource("ProceduralSkyMaterial_nkrc8")
+
+[sub_resource type="Environment" id="Environment_nduim"]
+background_mode = 2
+sky = SubResource("Sky_npicf")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0rmgc"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_mi0ev"]
+size = Vector3(1, 10, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5fedb"]
+albedo_texture = ExtResource("3_sqdta")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6pnpv"]
+albedo_texture = ExtResource("4_2gpcr")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_as1bx"]
+albedo_texture = ExtResource("5_hmxxu")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kxti1"]
+albedo_texture = ExtResource("6_yaqib")
+
+[sub_resource type="BoxMesh" id="BoxMesh_a66cr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lhxq1"]
+albedo_texture = ExtResource("6_t6hdm")
+
+[sub_resource type="BoxMesh" id="BoxMesh_2tsdm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1g0g7"]
+albedo_texture = ExtResource("7_7g0a2")
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_y6i0k"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_2him0"]
+size = Vector2(300, 300)
+
+[node name="Main" type="Node"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_nduim")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." node_paths=PackedStringArray("Crosshairs", "EscPanel")]
+script = ExtResource("1_ya58u")
+Crosshairs = NodePath("TextureRect")
+EscPanel = NodePath("Panel")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_6m21f")
+
+[node name="Panel" type="Panel" parent="CanvasLayer" node_paths=PackedStringArray("ResumeBtn", "QuitBtn")]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -192.0
+offset_top = -220.0
+offset_right = 192.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_stl7t")
+ResumeBtn = NodePath("Button")
+QuitBtn = NodePath("Button2")
+
+[node name="Button" type="Button" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -88.0
+offset_top = 56.0
+offset_right = 88.0
+offset_bottom = 114.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 25
+text = "Resume"
+
+[node name="Button2" type="Button" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -88.0
+offset_top = -104.0
+offset_right = 88.0
+offset_bottom = -46.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 25
+text = "Quit"
+
+[node name="Node3DRoot" type="Node3D" parent="."]
+script = ExtResource("1_rvwsf")
+
+[node name="SunLight" type="DirectionalLight3D" parent="Node3DRoot"]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 10, 0)
+shadow_enabled = true
+
+[node name="Decoration" type="Node3D" parent="Node3DRoot"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3DRoot/Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 5, 60)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3DRoot/Decoration/StaticBody3D"]
+shape = SubResource("BoxShape3D_0rmgc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3DRoot/Decoration/StaticBody3D"]
+mesh = SubResource("BoxMesh_mi0ev")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_5fedb")
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="Node3DRoot/Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60, 5, 60)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3DRoot/Decoration/StaticBody3D4"]
+shape = SubResource("BoxShape3D_0rmgc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3DRoot/Decoration/StaticBody3D4"]
+mesh = SubResource("BoxMesh_mi0ev")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_6pnpv")
+
+[node name="StaticBody3D5" type="StaticBody3D" parent="Node3DRoot/Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60, 5, -60)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3DRoot/Decoration/StaticBody3D5"]
+shape = SubResource("BoxShape3D_0rmgc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3DRoot/Decoration/StaticBody3D5"]
+mesh = SubResource("BoxMesh_mi0ev")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_as1bx")
+
+[node name="StaticBody3D6" type="StaticBody3D" parent="Node3DRoot/Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 5, -60)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3DRoot/Decoration/StaticBody3D6"]
+shape = SubResource("BoxShape3D_0rmgc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3DRoot/Decoration/StaticBody3D6"]
+mesh = SubResource("BoxMesh_mi0ev")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_kxti1")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Node3DRoot/Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.5, 5)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3DRoot/Decoration/StaticBody3D2"]
+shape = SubResource("BoxShape3D_0rmgc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3DRoot/Decoration/StaticBody3D2"]
+mesh = SubResource("BoxMesh_a66cr")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_lhxq1")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="Node3DRoot/Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.5, 5)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3DRoot/Decoration/StaticBody3D3"]
+shape = SubResource("BoxShape3D_0rmgc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3DRoot/Decoration/StaticBody3D3"]
+mesh = SubResource("BoxMesh_2tsdm")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_1g0g7")
+
+[node name="Ground" type="StaticBody3D" parent="Node3DRoot"]
+disable_mode = 1
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3DRoot/Ground"]
+shape = SubResource("WorldBoundaryShape3D_y6i0k")
+
+[node name="PlaneMesh" type="MeshInstance3D" parent="Node3DRoot/Ground"]
+mesh = SubResource("PlaneMesh_2him0")
+skeleton = NodePath("../..")
+
+[node name="Spear_Rigi" parent="Node3DRoot" instance=ExtResource("11_4ynku")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43461, 0.440491, -0.26128)
+
+[node name="Player" parent="Node3DRoot" instance=ExtResource("1_uamsx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, -2)
+
+[node name="Enemy" parent="Node3DRoot" instance=ExtResource("12_mkbat")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2655, 2.03477, 6.55779)
+DefaultEquipments = Array[PackedScene]([ExtResource("13_3j3lx")])
+
+[node name="Enemy2" parent="Node3DRoot" instance=ExtResource("12_mkbat")]
+transform = Transform3D(0.209328, 0, -0.977845, 0, 1, 0, 0.977845, 0, 0.209328, 2.56418, 2, 10)
+DefaultEquipments = Array[PackedScene]([ExtResource("13_3j3lx")])
+
+[node name="Enemy3" parent="Node3DRoot" instance=ExtResource("12_mkbat")]
+transform = Transform3D(0.166098, 0, 0.986109, 0, 1, 0, -0.986109, 0, 0.166098, -2.27918, 1.25026, 10.5548)
+DefaultEquipments = Array[PackedScene]([ExtResource("13_3j3lx")])
+
+[node name="Enemy4" parent="Node3DRoot" instance=ExtResource("12_mkbat")]
+transform = Transform3D(-0.911461, 0, 0.411387, 0, 1, 0, -0.411387, 0, -0.911461, 0.151112, 1.36052, 13.5781)
+DefaultEquipments = Array[PackedScene]([ExtResource("13_3j3lx")])
+
+[node name="Enemy5" parent="Node3DRoot" instance=ExtResource("12_mkbat")]
+transform = Transform3D(-0.740957, 0, 0.671552, 0, 1, 0, -0.671552, 0, -0.740957, 4.83985, 1.76879, 7.05316)
+DefaultEquipments = Array[PackedScene]([ExtResource("13_3j3lx")])
+
+[node name="Vehicle Equip" parent="Node3DRoot" instance=ExtResource("13_p3k0t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.26604, -15.193)
+
+[node name="DroneEquip" parent="Node3DRoot" instance=ExtResource("14_tpd2e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0758977, 1, -5.04703)
+collision_mask = 31

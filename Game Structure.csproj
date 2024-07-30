@@ -1,0 +1,16 @@
+<Project Sdk="Godot.NET.Sdk/4.2.2">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework Condition=" '$(GodotTargetPlatform)' == 'android' ">net7.0</TargetFramework>
+    <TargetFramework Condition=" '$(GodotTargetPlatform)' == 'ios' ">net8.0</TargetFramework>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <RootNamespace>GameStructure</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Scripts\Game Structure\BaseClasses\**" />
+    <EmbeddedResource Remove="Scripts\Game Structure\BaseClasses\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Scripts\Game Structure\Dynamic Scroll Container\" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://bfweiy4i01v07"]
+
+[ext_resource type="Script" path="res://Scripts/Equipments/Equip_Common_Rigi.cs" id="1_422fe"]
+[ext_resource type="PackedScene" uid="uid://dsjllrus3admr" path="res://Prefabs/Equipments/Spear/Spear_Area.tscn" id="2_m7ubi"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0r8ur"]
+size = Vector3(0.1, 0.1, 2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_bw3db"]
+size = Vector3(0.1, 0.1, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_00hu1"]
+albedo_color = Color(0, 0.721569, 1, 1)
+
+[node name="Spear_Rigi" type="RigidBody3D"]
+script = ExtResource("1_422fe")
+equipArea = ExtResource("2_m7ubi")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.5)
+shape = SubResource("BoxShape3D_0r8ur")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.5)
+mesh = SubResource("BoxMesh_bw3db")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_00hu1")

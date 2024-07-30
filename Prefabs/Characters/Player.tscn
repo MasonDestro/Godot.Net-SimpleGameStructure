@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://ybqs3dfowsba"]
+
+[ext_resource type="Script" path="res://Scripts/Characters/Player.cs" id="1_61myw"]
+[ext_resource type="Texture2D" uid="uid://dvqn6hg7q5hrl" path="res://Art/Texture/Player.png" id="2_h34lo"]
+[ext_resource type="Script" path="res://Scripts/EquipSlot.cs" id="4_og38x"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wufgc"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_jkibu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ws157"]
+albedo_texture = ExtResource("2_h34lo")
+
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("CameraPivot", "Camera", "CollisionShape")]
+collision_layer = 2
+collision_mask = 31
+script = ExtResource("1_61myw")
+CameraPivot = NodePath("Camera Pivot")
+Camera = NodePath("Camera Pivot/Camera Position/Camera3D")
+CollisionShape = NodePath("CollisionShape3D")
+
+[node name="Camera Pivot" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.866025, -0.5, 0, 0.5, 0.866025, 0, 0.5, 0)
+
+[node name="Camera Position" type="Node3D" parent="Camera Pivot"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.51, -2.5)
+
+[node name="Camera3D" type="Camera3D" parent="Camera Pivot/Camera Position"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_wufgc")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_jkibu")
+surface_material_override/0 = SubResource("StandardMaterial3D_ws157")
+
+[node name="EquipSlots" type="Node3D" parent="."]
+
+[node name="Left Hand" type="Node3D" parent="EquipSlots"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0)
+script = ExtResource("4_og38x")
+SlotType = 1
+
+[node name="Right Hand" type="Node3D" parent="EquipSlots"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
+script = ExtResource("4_og38x")
+SlotType = 2
+
+[node name="Back" type="Node3D" parent="EquipSlots"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
+script = ExtResource("4_og38x")
+SlotType = 3

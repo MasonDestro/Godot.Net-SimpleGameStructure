@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://c8qdrkd0glq36"]
+
+[ext_resource type="Script" path="res://Scripts/Equipments/Equip_Vehicle.cs" id="1_h4b6o"]
+[ext_resource type="Texture2D" uid="uid://6yucr30e1y5d" path="res://Art/Texture/Vehicle.png" id="2_234sf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h0jd1"]
+size = Vector3(0.6, 1.4, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_jf8jm"]
+size = Vector3(0.6, 1.4, 4)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ytp3y"]
+albedo_texture = ExtResource("2_234sf")
+
+[node name="Vehicle Equip" type="CharacterBody3D" node_paths=PackedStringArray("Seat", "CameraPivot", "Camera")]
+collision_layer = 8
+script = ExtResource("1_h4b6o")
+Seat = NodePath("Seat")
+CameraPivot = NodePath("Camera Pivot")
+Camera = NodePath("Camera Pivot/Camera Position/Camera3D")
+
+[node name="Seat" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.7)
+
+[node name="Camera Pivot" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.866025, -0.5, 0, 0.5, 0.866025, 0, 1, -1.5)
+
+[node name="Camera Position" type="Node3D" parent="Camera Pivot"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, -3.91265)
+
+[node name="Camera3D" type="Camera3D" parent="Camera Pivot/Camera Position"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_h0jd1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_jf8jm")
+surface_material_override/0 = SubResource("StandardMaterial3D_ytp3y")

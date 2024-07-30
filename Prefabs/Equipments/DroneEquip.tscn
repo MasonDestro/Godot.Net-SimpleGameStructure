@@ -1,0 +1,70 @@
+[gd_scene load_steps=9 format=3 uid="uid://cm5uhcybqm5am"]
+
+[ext_resource type="Script" path="res://Scripts/Equipments/Equip_Drone.cs" id="1_3ngko"]
+[ext_resource type="Texture2D" uid="uid://bqqwar3qrefbo" path="res://Art/Texture/Drone.png" id="2_masvs"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_i56mx"]
+size = Vector3(0.3, 0.2, 0.3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_t7ffu"]
+size = Vector3(0.3, 0.1, 0.3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2x1wm"]
+albedo_texture = ExtResource("2_masvs")
+
+[sub_resource type="Animation" id="Animation_hoobk"]
+resource_name = "Drone Deploy"
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 0.5, 1, 0, 2, 0, 1, 1, 0, 2, 2)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -0.707, 0, 0, 0.707, 0.5, 1, -0.707, 0, 0, 0.707, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_81c8g"]
+length = 0.001
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2mo00"]
+_data = {
+"Drone Deploy": SubResource("Animation_hoobk"),
+"RESET": SubResource("Animation_81c8g")
+}
+
+[node name="DroneEquip" type="CharacterBody3D" node_paths=PackedStringArray("CameraPivot", "Camera", "animPlayer", "collisionShape")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+collision_layer = 4
+collision_mask = 15
+script = ExtResource("1_3ngko")
+CameraPivot = NodePath("Camera Pivot")
+Camera = NodePath("Camera Pivot/Camera Position/Camera3D")
+animPlayer = NodePath("AnimationPlayer")
+collisionShape = NodePath("CollisionShape3D")
+
+[node name="Camera Pivot" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.866025, -0.5, 0, 0.5, 0.866025, 0, -0.05, 0.15)
+
+[node name="Camera Position" type="Node3D" parent="Camera Pivot"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Camera Pivot/Camera Position"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_i56mx")
+disabled = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_t7ffu")
+surface_material_override/0 = SubResource("StandardMaterial3D_2x1wm")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_2mo00")
+}
