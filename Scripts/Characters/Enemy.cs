@@ -52,12 +52,15 @@ public partial class Enemy : CharacterBody3D, IResponseToInputAction
             EquipedEquipments.Add(es, null);
         }
 
-        foreach (var equipPackedScene in DefaultEquipments)
+        if (DefaultEquipments != null)
         {
-            var equipInst = equipPackedScene.Instantiate<Node3D>();
-            if (equipInst != null && equipInst is IEquipment equip)
+            foreach (var equipPackedScene in DefaultEquipments)
             {
-                equip.Equip(this, true);
+                var equipInst = equipPackedScene.Instantiate<Node3D>();
+                if (equipInst != null && equipInst is IEquipment equip)
+                {
+                    equip.Equip(this, true);
+                }
             }
         }
 

@@ -3,7 +3,7 @@ using Godot.Collections;
 using System;
 using static GlobalTypes;
 
-public partial class Equip_Spear_Area : Area3D, IEquipment
+public partial class Equip_Common_Area : Area3D, IEquipment
 {
     [Export]
     string equipRigiPath;

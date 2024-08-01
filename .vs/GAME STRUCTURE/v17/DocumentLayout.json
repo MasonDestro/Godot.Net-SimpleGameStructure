@@ -3,52 +3,48 @@
   "WorkspaceRootPath": "E:\\Godot Projects\\Game Structure\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0844722B-492B-4D10-8D39-F726052536AA}|Game Structure.csproj|e:\\godot projects\\game structure\\scripts\\test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0844722B-492B-4D10-8D39-F726052536AA}|Game Structure.csproj|solutionrelative:scripts\\test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0844722B-492B-4D10-8D39-F726052536AA}|Game Structure.csproj|e:\\godot projects\\game structure\\scripts\\equipments\\equip_common_area.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0844722B-492B-4D10-8D39-F726052536AA}|Game Structure.csproj|solutionrelative:scripts\\equipments\\equip_common_area.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0844722B-492B-4D10-8D39-F726052536AA}|Game Structure.csproj|e:\\godot projects\\game structure\\scripts\\game structure\\managers\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0844722B-492B-4D10-8D39-F726052536AA}|Game Structure.csproj|solutionrelative:scripts\\game structure\\managers\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0844722B-492B-4D10-8D39-F726052536AA}|Game Structure.csproj|e:\\godot projects\\game structure\\scripts\\equipments\\equip_drone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0844722B-492B-4D10-8D39-F726052536AA}|Game Structure.csproj|solutionrelative:scripts\\equipments\\equip_drone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0844722B-492B-4D10-8D39-F726052536AA}|Game Structure.csproj|e:\\godot projects\\game structure\\scripts\\characters\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0844722B-492B-4D10-8D39-F726052536AA}|Game Structure.csproj|solutionrelative:scripts\\characters\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0844722B-492B-4D10-8D39-F726052536AA}|Game Structure.csproj|e:\\godot projects\\game structure\\scripts\\game structure\\interfaces\\iresponsetoinputaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0844722B-492B-4D10-8D39-F726052536AA}|Game Structure.csproj|solutionrelative:scripts\\game structure\\interfaces\\iresponsetoinputaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0844722B-492B-4D10-8D39-F726052536AA}|Game Structure.csproj|e:\\godot projects\\game structure\\scripts\\characters\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0844722B-492B-4D10-8D39-F726052536AA}|Game Structure.csproj|solutionrelative:scripts\\characters\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0844722B-492B-4D10-8D39-F726052536AA}|Game Structure.csproj|e:\\godot projects\\game structure\\scripts\\equipments\\equip_common_rigi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0844722B-492B-4D10-8D39-F726052536AA}|Game Structure.csproj|solutionrelative:scripts\\equipments\\equip_common_rigi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0844722B-492B-4D10-8D39-F726052536AA}|Game Structure.csproj|e:\\godot projects\\game structure\\scripts\\game structure\\managers\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0844722B-492B-4D10-8D39-F726052536AA}|Game Structure.csproj|solutionrelative:scripts\\game structure\\managers\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0844722B-492B-4D10-8D39-F726052536AA}|Game Structure.csproj|e:\\godot projects\\game structure\\scripts\\game structure\\interfaces\\iequipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0844722B-492B-4D10-8D39-F726052536AA}|Game Structure.csproj|solutionrelative:scripts\\game structure\\interfaces\\iequipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0844722B-492B-4D10-8D39-F726052536AA}|Game Structure.csproj|e:\\godot projects\\game structure\\scripts\\game structure\\interfaces\\iresponsetoinputaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0844722B-492B-4D10-8D39-F726052536AA}|Game Structure.csproj|solutionrelative:scripts\\game structure\\interfaces\\iresponsetoinputaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0844722B-492B-4D10-8D39-F726052536AA}|Game Structure.csproj|e:\\godot projects\\game structure\\scripts\\equipslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0844722B-492B-4D10-8D39-F726052536AA}|Game Structure.csproj|solutionrelative:scripts\\equipslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0844722B-492B-4D10-8D39-F726052536AA}|Game Structure.csproj|e:\\godot projects\\game structure\\scripts\\game structure\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0844722B-492B-4D10-8D39-F726052536AA}|Game Structure.csproj|solutionrelative:scripts\\game structure\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0844722B-492B-4D10-8D39-F726052536AA}|Game Structure.csproj|e:\\godot projects\\game structure\\scripts\\characters\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0844722B-492B-4D10-8D39-F726052536AA}|Game Structure.csproj|solutionrelative:scripts\\characters\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0844722B-492B-4D10-8D39-F726052536AA}|Game Structure.csproj|e:\\godot projects\\game structure\\scripts\\equipments\\equip_drone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0844722B-492B-4D10-8D39-F726052536AA}|Game Structure.csproj|solutionrelative:scripts\\equipments\\equip_drone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0844722B-492B-4D10-8D39-F726052536AA}|Game Structure.csproj|e:\\godot projects\\game structure\\scripts\\equipments\\equip_vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0844722B-492B-4D10-8D39-F726052536AA}|Game Structure.csproj|solutionrelative:scripts\\equipments\\equip_vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0844722B-492B-4D10-8D39-F726052536AA}|Game Structure.csproj|e:\\godot projects\\game structure\\scripts\\game structure\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0844722B-492B-4D10-8D39-F726052536AA}|Game Structure.csproj|solutionrelative:scripts\\game structure\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0844722B-492B-4D10-8D39-F726052536AA}|Game Structure.csproj|e:\\godot projects\\game structure\\scripts\\equipments\\equip_common_rigi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0844722B-492B-4D10-8D39-F726052536AA}|Game Structure.csproj|solutionrelative:scripts\\equipments\\equip_common_rigi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0844722B-492B-4D10-8D39-F726052536AA}|Game Structure.csproj|e:\\godot projects\\game structure\\scripts\\equipslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0844722B-492B-4D10-8D39-F726052536AA}|Game Structure.csproj|solutionrelative:scripts\\equipslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0844722B-492B-4D10-8D39-F726052536AA}|Game Structure.csproj|e:\\godot projects\\game structure\\scripts\\test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0844722B-492B-4D10-8D39-F726052536AA}|Game Structure.csproj|solutionrelative:scripts\\test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,33 +54,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Equip_Common_Area.cs",
               "DocumentMoniker": "E:\\Godot Projects\\Game Structure\\Scripts\\Equipments\\Equip_Common_Area.cs",
               "RelativeDocumentMoniker": "Scripts\\Equipments\\Equip_Common_Area.cs",
               "ToolTip": "E:\\Godot Projects\\Game Structure\\Scripts\\Equipments\\Equip_Common_Area.cs",
               "RelativeToolTip": "Scripts\\Equipments\\Equip_Common_Area.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAlAAAA",
+              "ViewState": "AQIAAHQAAAAAAAAAAAAUwJAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-01T06:38:24.557Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 10,
               "Title": "Test.cs",
               "DocumentMoniker": "E:\\Godot Projects\\Game Structure\\Scripts\\Test.cs",
               "RelativeDocumentMoniker": "Scripts\\Test.cs",
               "ToolTip": "E:\\Godot Projects\\Game Structure\\Scripts\\Test.cs",
               "RelativeToolTip": "Scripts\\Test.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-01T06:37:02.69Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-01T06:37:02.69Z"
             },
             {
               "$type": "Document",
@@ -114,18 +109,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "IEquipment.cs",
-              "DocumentMoniker": "E:\\Godot Projects\\Game Structure\\Scripts\\Game Structure\\Interfaces\\IEquipment.cs",
-              "RelativeDocumentMoniker": "Scripts\\Game Structure\\Interfaces\\IEquipment.cs",
-              "ToolTip": "E:\\Godot Projects\\Game Structure\\Scripts\\Game Structure\\Interfaces\\IEquipment.cs",
-              "RelativeToolTip": "Scripts\\Game Structure\\Interfaces\\IEquipment.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-29T09:04:50.83Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "Equip_Common_Rigi.cs",
               "DocumentMoniker": "E:\\Godot Projects\\Game Structure\\Scripts\\Equipments\\Equip_Common_Rigi.cs",
               "RelativeDocumentMoniker": "Scripts\\Equipments\\Equip_Common_Rigi.cs",
@@ -137,32 +120,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 7,
               "Title": "Equip_Vehicle.cs",
               "DocumentMoniker": "E:\\Godot Projects\\Game Structure\\Scripts\\Equipments\\Equip_Vehicle.cs",
               "RelativeDocumentMoniker": "Scripts\\Equipments\\Equip_Vehicle.cs",
               "ToolTip": "E:\\Godot Projects\\Game Structure\\Scripts\\Equipments\\Equip_Vehicle.cs",
               "RelativeToolTip": "Scripts\\Equipments\\Equip_Vehicle.cs",
-              "ViewState": "AQIAADEAAAAAAAAAAAAAwHAAAABPAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHAAAABPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-18T05:20:08.147Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Equip_Drone.cs",
               "DocumentMoniker": "E:\\Godot Projects\\Game Structure\\Scripts\\Equipments\\Equip_Drone.cs",
               "RelativeDocumentMoniker": "Scripts\\Equipments\\Equip_Drone.cs",
               "ToolTip": "E:\\Godot Projects\\Game Structure\\Scripts\\Equipments\\Equip_Drone.cs",
               "RelativeToolTip": "Scripts\\Equipments\\Equip_Drone.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAADwvyUAAAAkAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACUAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T07:28:46.072Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-24T07:28:46.072Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "IResponseToInputAction.cs",
               "DocumentMoniker": "E:\\Godot Projects\\Game Structure\\Scripts\\Game Structure\\Interfaces\\IResponseToInputAction.cs",
               "RelativeDocumentMoniker": "Scripts\\Game Structure\\Interfaces\\IResponseToInputAction.cs",
@@ -175,33 +157,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Player.cs",
               "DocumentMoniker": "E:\\Godot Projects\\Game Structure\\Scripts\\Characters\\Player.cs",
               "RelativeDocumentMoniker": "Scripts\\Characters\\Player.cs",
               "ToolTip": "E:\\Godot Projects\\Game Structure\\Scripts\\Characters\\Player.cs",
               "RelativeToolTip": "Scripts\\Characters\\Player.cs",
-              "ViewState": "AQIAAGgAAAAAAAAAAAAIwIoAAAAaAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAIoAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-13T05:39:30.612Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-13T05:39:30.612Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "Enemy.cs",
               "DocumentMoniker": "E:\\Godot Projects\\Game Structure\\Scripts\\Characters\\Enemy.cs",
               "RelativeDocumentMoniker": "Scripts\\Characters\\Enemy.cs",
               "ToolTip": "E:\\Godot Projects\\Game Structure\\Scripts\\Characters\\Enemy.cs",
               "RelativeToolTip": "Scripts\\Characters\\Enemy.cs",
-              "ViewState": "AQIAAFgAAAAAAAAAAAAAAMkAAAAEAAAA",
+              "ViewState": "AQIAACsAAAAAAAAAAAAxwDwAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-24T09:42:42.744Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 4,
               "Title": "Constants.cs",
               "DocumentMoniker": "E:\\Godot Projects\\Game Structure\\Scripts\\Game Structure\\Constants.cs",
               "RelativeDocumentMoniker": "Scripts\\Game Structure\\Constants.cs",

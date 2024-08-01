@@ -88,8 +88,8 @@ _data = {
 "RESET": SubResource("Animation_5002k")
 }
 
-[node name="Spear_Area" type="Area3D" node_paths=PackedStringArray("animPlayer")]
-transform = Transform3D(0.965926, 1.49011e-08, -0.258819, 0.0669873, 0.965925, 0.25, 0.25, -0.258819, 0.933012, 0, 0, 0)
+[node name="Sword_Area" type="Area3D" node_paths=PackedStringArray("animPlayer")]
+transform = Transform3D(0.965926, -1.71363e-07, -0.258819, 0.0669873, 0.965925, 0.25, 0.25, -0.258819, 0.933012, 0, 0, 0)
 collision_layer = 4
 collision_mask = 19
 monitorable = false
