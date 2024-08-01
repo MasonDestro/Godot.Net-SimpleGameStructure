@@ -37,6 +37,7 @@ public partial class InputManager : Node
     private class InputResponse
     {
         public ulong InstanceID { get; init; }
+        public Action OnUnregistered;
 
         public InputActionResponse _Process = new InputActionResponse();
         public InputActionResponse _PhysicsProcess = new InputActionResponse();
@@ -172,7 +173,10 @@ public partial class InputManager : Node
 
     public void RegisterInputMethods(GlobalTypes.InputActionMessage msg)
     {
+        activeResponse?.OnUnregistered?.Invoke();
+
         activeResponse = new InputResponse(msg.InstanceID);
+        activeResponse.OnUnregistered = msg.OnUnregistered;
 
         foreach (var kvpair in msg.Actions)
         {

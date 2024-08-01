@@ -54,6 +54,7 @@ public static class GlobalTypes
     {
         public ulong InstanceID;
         public Dictionary<InputActionParams, InputActionDetail> Actions;
+        public Action OnUnregistered;
     }
 
     #endregion

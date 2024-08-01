@@ -16,6 +16,7 @@ public partial class Equip_Drone : CharacterBody3D, IEquipment, IResponseToInput
     InputActionDetail? _targetEscActionDetail;
 
     bool _isDeployed;
+    bool _isUsing;
 
     #endregion
 
@@ -98,7 +99,7 @@ public partial class Equip_Drone : CharacterBody3D, IEquipment, IResponseToInput
             CameraRotate(0, fakeMouseMotion);
         }
 
-        if (_user == null && !IsOnFloor())
+        if (_user == null && _target == null && !_isUsing && !IsOnFloor())
         {
             Vector3 _velocity = Velocity;
             _velocity += (float)delta * Constants.Gravity3D;
@@ -231,6 +232,15 @@ public partial class Equip_Drone : CharacterBody3D, IEquipment, IResponseToInput
     #endregion
 
 
+    #region Private Methods
+
+    private void OnUnregistered()
+    {
+        _isUsing = false;
+    }
+
+    #endregion
+
 
     #region IEquipment
 
@@ -264,6 +274,8 @@ public partial class Equip_Drone : CharacterBody3D, IEquipment, IResponseToInput
 
                     Position = Vector3.Zero;
                     RotationDegrees = new Vector3(-90, 0, 0);
+
+                    player.EquipedEquipments[es] = this;
 
                     break;
                 }
@@ -307,6 +319,9 @@ public partial class Equip_Drone : CharacterBody3D, IEquipment, IResponseToInput
         _user = null;
         _userUseSkillActionDetail = null;
 
+        _isDeployed = false;
+        _isUsing = false;
+
         Velocity = Vector3.Zero;
     }
 
@@ -325,6 +340,8 @@ public partial class Equip_Drone : CharacterBody3D, IEquipment, IResponseToInput
 
         Input.MouseMode = Input.MouseModeEnum.Captured;
         Camera.Current = true;
+
+        _isUsing = true;
     }
 
     public void InitInputActionMessage()
@@ -339,7 +356,8 @@ public partial class Equip_Drone : CharacterBody3D, IEquipment, IResponseToInput
         _iaMsg = new()
         {
             InstanceID = GetInstanceId(),
-            Actions = new()
+            Actions = new(),
+            OnUnregistered = OnUnregistered
         };
 
         _iaMsg.Actions.Add(Constants.InputAction_Esc, new InputActionDetail

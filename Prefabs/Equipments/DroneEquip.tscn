@@ -39,9 +39,8 @@ _data = {
 }
 
 [node name="DroneEquip" type="CharacterBody3D" node_paths=PackedStringArray("CameraPivot", "Camera", "animPlayer", "collisionShape")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
 collision_layer = 4
-collision_mask = 15
+collision_mask = 31
 script = ExtResource("1_3ngko")
 CameraPivot = NodePath("Camera Pivot")
 Camera = NodePath("Camera Pivot/Camera Position/Camera3D")

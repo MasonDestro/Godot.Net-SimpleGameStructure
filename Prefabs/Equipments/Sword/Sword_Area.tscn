@@ -1,15 +1,15 @@
-[gd_scene load_steps=9 format=3 uid="uid://dsjllrus3admr"]
+[gd_scene load_steps=9 format=3 uid="uid://1t0yjbnw5j1"]
 
-[ext_resource type="Script" path="res://Scripts/Equipments/Equip_Common_Area.cs" id="1_oiq4j"]
+[ext_resource type="Script" path="res://Scripts/Equipments/Equip_Common_Area.cs" id="1_yc5tg"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0r8ur"]
-size = Vector3(0.1, 0.1, 2.5)
+size = Vector3(0.1, 0.1, 1.3)
 
 [sub_resource type="BoxMesh" id="BoxMesh_bw3db"]
-size = Vector3(0.1, 0.1, 2.5)
+size = Vector3(0.1, 0.1, 1.3)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_00hu1"]
-albedo_color = Color(0, 0.721569, 1, 1)
+albedo_color = Color(0.584314, 0.34902, 1, 1)
 
 [sub_resource type="Animation" id="Animation_xpef0"]
 resource_name = "Attack"
@@ -20,10 +20,10 @@ tracks/0/path = NodePath(".:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.7, 1),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.2, 0.5, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(-1.0472, 0, 0), Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(-1.0472, 0, 0)]
+"values": [Vector3(-0.261799, -0.261799, 0.0698132), Vector3(-0.739445, -1.12023, -0.0568262), Vector3(0, 1.22173, 0), Vector3(-0.261799, -0.261799, 0.0872665), Vector3(-0.261799, -0.261799, 0.0872665)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -32,10 +32,10 @@ tracks/1/path = NodePath(".:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.3, 0.5, 0.7),
+"times": PackedFloat32Array(0, 0.2, 0.5, 0.9, 1),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 0, -0.2), Vector3(0, 0, 0.4), Vector3(0, 0, 0)]
+"values": [Vector3(0, 0, 0), Vector3(-0.200883, 0.141664, 0.231562), Vector3(0.336704, 0.141664, 0.496213), Vector3(0, 0, 0), Vector3(0, 0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_n26cw"]
@@ -51,7 +51,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.05),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(-1.0472, 0, 0), Vector3(-1.0472, 0, 0)]
+"values": [Vector3(-0.261799, -0.261799, 0.0872665), Vector3(-0.261799, -0.261799, 0.0872665)]
 }
 
 [sub_resource type="Animation" id="Animation_5002k"]
@@ -66,7 +66,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(-1.0472, 0, 0)]
+"values": [Vector3(-0.25268, -0.270597, 0.0692395)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -78,7 +78,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0, 0, -0.2)]
+"values": [Vector3(0, 0, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_iafoc"]
@@ -89,22 +89,22 @@ _data = {
 }
 
 [node name="Spear_Area" type="Area3D" node_paths=PackedStringArray("animPlayer")]
-transform = Transform3D(1, 0, 0, 0, 0.499998, 0.866026, 0, -0.866026, 0.499998, 0, 0, -0.2)
+transform = Transform3D(0.965926, 1.49011e-08, -0.258819, 0.0669873, 0.965925, 0.25, 0.25, -0.258819, 0.933012, 0, 0, 0)
 collision_layer = 4
 collision_mask = 19
 monitorable = false
-script = ExtResource("1_oiq4j")
-equipRigiPath = "res://Prefabs/Equipments/Spear/Spear_Rigi.tscn"
+script = ExtResource("1_yc5tg")
+equipRigiPath = "res://Prefabs/Equipments/Sword/Sword_Rigi.tscn"
 animPlayer = NodePath("AnimationPlayer")
 EquipName = "Spear"
 equipSlot = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.7)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.5)
 shape = SubResource("BoxShape3D_0r8ur")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.7)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.5)
 mesh = SubResource("BoxMesh_bw3db")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_00hu1")
